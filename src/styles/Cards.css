@@ -1,0 +1,110 @@
+/* src/components/ClubCard.css */
+
+.club-card {
+  /* الخلفية والحدود */
+  background-color: #668658;
+  border: 1px solid rgba(205, 168, 123, 0.2); /* حدود ذهبية باهتة */
+  border-radius: 12px;
+  padding: 30px;
+  
+  /* التخطيط */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  
+  /* تأثيرات */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* تأثير ضوء خفيف عند المرور بالماوس */
+.club-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top right, rgba(205, 168, 123, 0.1), transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.club-card:hover {
+  transform: translateY(-5px);
+  border-color: #cda87b;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.8), 0 0 15px rgba(205, 168, 123, 0.15);
+}
+
+.club-card:hover::before {
+  opacity: 1;
+}
+
+/* --- العنوان --- */
+.club-title {
+  font-family: 'Cinzel', serif;
+  color: #1a1514; 
+  font-size: 24px;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* --- الوصف --- */
+.club-description {
+  font-family: 'Lora', serif;
+  color: #1a1514; /* لون رمادي فاتح مريح للعين */
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 0;
+  flex-grow: 1; /* لدفع الجزء السفلي للأسفل دائماً */
+}
+
+/* --- الجزء السفلي (الأعضاء والوقت) --- */
+.club-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(255, 255, 255, 0.08); /* خط فاصل رفيع */
+  padding-top: 15px;
+  margin-top: 10px;
+  
+  font-family: 'Lora', serif;
+  font-size: 13px;
+  color: #888;
+}
+
+/* تنسيق النصوص داخل الجزء السفلي */
+.club-members, .club-time {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.3s ease;
+}
+
+.club-card:hover .club-members,
+.club-card:hover .club-time {
+  color: #cda87b; /* يتغير لونهما للذهبي عند الوقوف على البطاقة */
+}
+
+/* النقطة الفاصلة بين الأعضاء والوقت */
+.club-divider {
+  width: 4px;
+  height: 4px;
+  background-color: rgba(205, 168, 123, 0.3);
+  border-radius: 50%;
+}
+
+/* --- استجابة للشاشات الصغيرة (Mobile) --- */
+@media (max-width: 400px) {
+  .club-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .club-divider {
+    display: none;
+  }
+}

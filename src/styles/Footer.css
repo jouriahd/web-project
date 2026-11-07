@@ -1,0 +1,126 @@
+/* FOOTER */
+
+.footer {
+  width: 100%;
+  background-color: #100708;
+  color: #D5B89E;
+  border-top: 1px solid #4A101A;
+  padding: 50px 8% 20px;
+}
+
+/* Footer Content */
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 70px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* About */
+
+.footer-about h2 {
+  color: #D5B89E;
+  font-family: Georgia, serif;
+  font-size: 27px;
+  font-weight: normal;
+  margin-bottom: 18px;
+}
+
+.footer-about p {
+  color: #C9A78B;
+  font-size: 14px;
+  line-height: 1.8;
+  max-width: 350px;
+}
+
+/* Navigation */
+
+.footer-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.footer-navigation h3,
+.footer-social h3 {
+  color: #A87961;
+  font-size: 17px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.footer-navigation a {
+  color: #D5B89E;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.footer-navigation a:hover {
+  color: #A87961;
+  padding-left: 5px;
+}
+
+/* Social Media */
+
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.social-icons {
+  display: flex;
+  gap: 8px;
+}
+
+.social-icons .MuiIconButton-root {
+  color: #D5B89E;
+  transition: 0.3s ease;
+}
+
+.social-icons .MuiIconButton-root:hover {
+  color: #FFFFFF;
+  background-color: #4A101A;
+}
+
+/* Bottom */
+
+.footer-bottom {
+  max-width: 1300px;
+  margin: 40px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(168, 121, 97, 0.3);
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: #A87961;
+  font-size: 12px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+  }
+
+  .footer-about {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-about {
+    grid-column: auto;
+  }
+}

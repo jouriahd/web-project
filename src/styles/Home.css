@@ -1,0 +1,176 @@
+.home-page {
+  width: 100%;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  height: 85vh; /* ارتفاع الشاشة تقريباً */
+  display: flex;
+  align-items: center;
+  padding: 0 10%;
+  /* استبدل الرابط بصورة خلفية مناسبة */
+  background: linear-gradient(to right, rgba(17, 13, 12, 0.95) 0%, rgba(17, 13, 12, 0.4) 100%), 
+              url('C:\Users\User\Downloads\Telegram Desktop\photo_2026-11-07_10-24-58.jpg') center/cover;
+}
+
+.hero-content {
+  max-width: 650px;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero-content h1 {
+  font-size: 4.5rem;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: var(--text-light);
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  font-style: italic;
+  color: var(--accent-gold);
+  margin-bottom: 40px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+/* --- الأزرار --- */
+.btn {
+  padding: 12px 35px;
+  border-radius: 30px;
+  font-family: 'Lora', serif;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: var(--accent-wine);
+  color: var(--text-light);
+  border: 1px solid var(--accent-wine);
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-light);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+}
+
+/* --- Cards Section --- */
+.cards-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 60px 10%;
+  margin-top: -50px; /* لرفع البطاقات قليلاً فوق قسم الهيرو */
+  position: relative;
+  z-index: 10;
+}
+
+.card {
+  padding: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.card-content h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.card-content p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* بطاقة الورق القديم */
+.card-parchment {
+  background-color: var(--parchment);
+  color: #333;
+  background-image: img src="/hero.jpg" alt="Hero Image"; /* تأثير ورق */
+}
+
+.card-parchment h2 {
+  color: var(--accent-wine);
+}
+
+.card-parchment .link-arrow {
+  color: #333;
+}
+
+/* البطاقة الداكنة */
+.card-dark {
+  background-color: #1a1514;
+  color: var(--text-light);
+}
+
+.card-dark h2 {
+  color: var(--accent-gold);
+}
+
+.club-info {
+  margin-bottom: 25px;
+}
+
+.small-text {
+  font-size: 13px;
+  color: #aaa;
+  display: block;
+  margin-top: 5px;
+}
+
+.members-info {
+  font-size: 14px;
+  color: #888;
+  margin-top: 15px;
+}
+
+/* الروابط */
+.link-arrow {
+  display: inline-block;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition: color 0.3s;
+}
+
+.gold-link {
+  color: var(--accent-gold);
+}
+
+.link-arrow:hover {
+  color: var(--accent-gold);
+}
+
+/* تأثير الظهور */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- التجاوب مع الشاشات الصغيرة (Mobile) --- */
+@media (max-width: 900px) {
+  .hero-content h1 { font-size: 3rem; }
+  .cards-section { grid-template-columns: 1fr; margin-top: 0; padding-top: 40px; }
+}
+
+@media (max-width: 600px) {
+  .hero-content h1 { font-size: 2.5rem; }
+  .hero-buttons { flex-direction: column; }
+  .btn { width: 100%; }
+}

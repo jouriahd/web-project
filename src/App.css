@@ -1,38 +1,34 @@
-.App {
-  text-align: center;
+/* index.css */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap');
+
+:root {
+  --bg-dark: #110d0c;
+  --text-light: #f4eee0;
+  --accent-gold: #cda87b;
+  --accent-wine: #5e1b25;
+  --parchment: #e8d5b5;
+  --border-color: rgba(205, 168, 123, 0.3);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: 'Lora', serif;
+  overflow-x: hidden;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+h1, h2, h3, h4, .nav-links a, .logo {
+  font-family: 'Cinzel', serif;
+  font-weight: 400;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a {
+  text-decoration: none;
+  color: inherit;
 }

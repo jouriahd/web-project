@@ -1,0 +1,78 @@
+
+.navbar {
+  width: 100%;
+  min-height: 75px;
+  padding: 0 4%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: #100708;
+  border-bottom: 1px solid #A87961;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #D5B89E;
+  font-family: Georgia, serif;
+  font-size: 23px;
+  text-decoration: none;
+}
+
+.logo-moon {
+  color: #A87961;
+  font-size: 43px;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.navbar-links a {
+  color: #D5B89E;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #A87961;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .navbar-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+/* Responsive Navbar */
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 15px 3%;
+    gap: 12px;
+  }
+
+  .navbar-links {
+    gap: 12px;
+  }
+
+  .navbar-links a {
+    font-size: 12px;
+  }
+
+  .logo {
+    font-size: 19px;
+  }
+}

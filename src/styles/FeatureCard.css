@@ -1,0 +1,46 @@
+
+.feature-card {
+  background-color: var(--accent-gold); /* الخلفية الداكنة */
+  color: var(--text-dark, #601010);
+  padding: 40px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color, rgba(78, 4, 4, 0.445));
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* تأثير عند مرور الماوس */
+.feature-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent-gold, #cda87b);
+}
+
+.feature-card h2 {
+  font-family: 'Cinzel', serif; /* خط العناوين الكلاسيكي */
+  color: var(--text-dark, #30070c);
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.feature-card p {
+  font-family: 'Lora', serif;
+  line-height: 1.6;
+  font-size: 15px;
+  margin-bottom: 25px;
+  flex-grow: 1; /* لدفع الرابط دائماً إلى الأسفل */
+}
+
+.feature-link {
+  color: var(--text-dark, #500e0e);
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  font-weight: 600;
+  width: fit-content;
+  transition: opacity 0.3s;
+}
+
+.feature-link:hover {
+  opacity: 0.7;
+}
