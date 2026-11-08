@@ -1,5 +1,5 @@
 import HeroCard from "../Components/HeroCard.js";
-import RegisterCard from "../Components/RegisterCard.js";
+import {ContactForm,LogInForm} from "../Components/RegisterCard.js";
 
 const Register = () => {
 return (
@@ -8,8 +8,9 @@ return (
       title="Register now"
       description="its time for a new begining"
     />
-     <RegisterCard />
+     <ContactForm/>
   </>
+    
      );
 };
 export default Register;

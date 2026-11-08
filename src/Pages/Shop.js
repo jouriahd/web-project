@@ -5,10 +5,8 @@ import "../styles/shop.css";
 
 const Shop = () => {
    const [count, setCount] = useState(0);
-   const addToCart = (product, quantity) => {
-    setCount((currentCount) => currentCount + quantity);
-   };
   
+
    const products = [
     {
       id: 1,
@@ -43,7 +41,7 @@ const Shop = () => {
         <div className="shop-section-title">
           <h2>Our Collection</h2>
           <p>Explore our carefully selected pieces.</p>
-          <p role="status">Cart: {count} {count === 1 ? "item" : "items"}</p>
+         
         </div>
 
         <div className="products-grid">
@@ -52,7 +50,7 @@ const Shop = () => {
             <ShopItem
               key={product.id}
               product={product}
-              addToCart={addToCart}
+            
             />
           ))}
 

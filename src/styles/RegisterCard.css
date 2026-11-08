@@ -69,3 +69,14 @@
     padding: 26px 20px;
   }
 }
+.login-link {
+  color: #A87961;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.login-link:hover {
+  color: #E8D3C0;
+  text-decoration: underline;
+}

@@ -1,12 +1,11 @@
 import { useState } from "react";
 import "../styles/shop.css";
 
-function ShopItem({ product, addToCart }) {
+ const ShopItem=({product})=> {
   const [quantity, setQuantity] = useState(1);
   const increase = () => setQuantity((count) => count + 1);
   const decrease = () => setQuantity((count) => Math.max(1, count - 1));
-  const handleAddToCart = () => addToCart(product, quantity);
-
+ 
   return (
     <div className="product-card">
 
@@ -38,7 +37,6 @@ function ShopItem({ product, addToCart }) {
         <button
           type="button"
           className="add-cart-btn"
-          onClick={handleAddToCart}
         >
           Add to Cart
         </button>
