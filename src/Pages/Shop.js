@@ -2,6 +2,9 @@ import HeroCard from "../Components/HeroCard.js";
 import { useState } from "react";
 import ShopItem from "../Components/ShopItem.js";
 import "../styles/shop.css";
+import flowerCup from "../images/flowercup.jpg";
+import basicCup from "../images/basicCup.jpg";
+import vintageCup from "../images/vintageCup.jpg";
 
 const Shop = () => {
    const [count, setCount] = useState(0);
@@ -13,21 +16,21 @@ const Shop = () => {
       name: "Flower cup",
       description: "A beautiful cup to start you day.",
       price: "$18",
-      image: "/images/flowercup.jpg",
+      image: flowerCup,
     },
     {
       id: 2,
       name: "Basic Cup",
       description: "A simple cup for your daily coffee.",
       price: "$15",
-      image: "/images/basicCup.jpg",
+      image: basicCup,
     },
     {
       id: 3,
       name: "Vintage Cup",
       description: "A cup with a touch of nostalgia.",
       price: "$22",
-      image: "/images/vintageCup.jpg",
+      image: vintageCup,
     },];
 
   return (

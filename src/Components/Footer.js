@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="footer-content">
 
         <div className="footer-about">
-          <h2>Marcy Potter</h2>
+          <h2>Dead Poets</h2>
 
           <p>
             A place to sip, explore, create and connect.
