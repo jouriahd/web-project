@@ -8,7 +8,7 @@ const NavBar = () => {
    <nav className="navbar">
     <Link to="/" className="logo">
         <span className="logo-moon">☾</span>
-        <span>Dead Poets</span>
+        <span>Arcana</span>
       </Link>
 
       <div className="navbar-links">

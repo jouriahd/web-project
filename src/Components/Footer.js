@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="footer-content">
 
         <div className="footer-about">
-          <h2>Dead Poets</h2>
+          <h2>Arcana</h2>
 
           <p>
             A place to sip, explore, create and connect.
@@ -66,7 +66,7 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <p>
-          &copy; 2026 Marcy Potter. All rights reserved.
+          &copy; 2026 Arcana. All rights reserved.
         </p>
       </div>
 
